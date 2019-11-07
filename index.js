@@ -1,6 +1,6 @@
 window.onload = () => {
   $.ajax({
-    url: "http://localhost:3001",
+    url: "https://arcane-tor-95559.herokuapp.com/",
     type: "GET",
     success: function(result, status) {
       if (status === "success") {
@@ -66,7 +66,7 @@ function onSearchClick() {
         code.push(element);
       });
       fillLoader(10);
-      fetch("http://localhost:3001/needle/", {
+      fetch("https://arcane-tor-95559.herokuapp.com/needle/", {
         method: "post",
         headers: {
           Accept: "application/json",
@@ -89,7 +89,7 @@ function onSearchClick() {
         }
       });
       fillLoader(10);
-      fetch("http://localhost:3001/water/", {
+      fetch("https://arcane-tor-95559.herokuapp.com/water/", {
         method: "post",
         headers: {
           Accept: "application/json",
@@ -114,7 +114,7 @@ function onSearchClick() {
       });
       fillLoader(10);
       if (count > 1) {
-        fetch("http://localhost:3001/multiple/", {
+        fetch("https://arcane-tor-95559.herokuapp.com/multiple/", {
           method: "post",
           headers: {
             Accept: "application/json",
