@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Staatliches&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Muli&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+    <title>Gen-One</title>
+  </head>
+  <body>
+    <div class="loader-animation">
+      <div id="one">&diams;</div>
+      <div id="onex">&diams;</div>
+      <div id="two">&diams;</div>
+      <div id="twox">&diams;</div>
+      <div id="three">&diams;</div>
+      <div id="four">&diams;</div>
+      <div id="five">&diams;</div>
+      <div id="six">&diams;</div>
+      <div id="threex">&diams;</div>
+      <div id="fourx">&diams;</div>
+      <div id="fivex">&diams;</div>
+      <div id="sixx">&diams;</div>
+      <div id="seven">&diams;</div>
+      <div id="sevenx">&diams;</div>
+      <div id="eight">&diams;</div>
+      <div id="eightx">&diams;</div>
+      <div id="nine">&diams;</div>
+      <div id="ninex">&diams;</div>
+      <div id="ten">&diams;</div>
+      <div id="tenx">&diams;</div>
+      <div id="eleven">&diams;</div>
+      <div id="elevenx">&diams;</div>
+      <div id="twelve">&diams;</div>
+      <div id="twelvex">&diams;</div>
+      <div id="thirt">&diams;</div>
+      <div id="thirtx">&diams;</div>
+      <div id="fourt">&diams;</div>
+      <div id="fourtx">&diams;</div>
+
+      <div id="serverStatus">
+        <h2>Server is Down!</h2>
+        <h4>try again later</h4>
+      </div>
+    </div>
+    <div class="header">
+      <h1>Gen-One</h1>
+    </div>
+
+    <div class="seqInputArea">
+      <h3>Enter you Sequences here.</h3>
+      <div class="inputSeq">
+        <textarea
+          name="seqText"
+          id="seqText"
+          cols="80"
+          rows=""
+          required
+        ></textarea>
+        <br />
+        <div class="seqType">
+          <h3>Select the sequence type.</h3>
+          <p>
+            <input type="radio" name="seqType" value="c" checked />Nucleotide
+            Sequence
+          </p>
+          <p>
+            <input type="radio" name="seqType" value="aa" />Amino-Acid Sequence
+          </p>
+        </div>
+        <br />
+        <input
+          class="searchBtn"
+          onclick="onSearchClick()"
+          type="submit"
+          value="Get Allignment"
+        />
+      </div>
+    </div>
+    <div class="instructions active">
+      <div class="close-ins" onclick="closeIns()">X</div>
+      <div class="warning">Incorrect Sequence Input.</div>
+      <div class="ins-content">
+        <ul>
+          <li>
+            Step 1: Enter the sequences in the sequence input box following the
+            Fasta sequence format (click
+            <a href="https://zhanglab.ccmb.med.umich.edu/FASTA/" target="_blank"
+              >here</a
+            >
+            to know more). Enter Sequences one after the other.
+          </li>
+          <li>Step 2: Select the Sequence type.</li>
+          <li>Step 3: Click on 'Get Allignment' button.</li>
+          <li>Result might take time to load up.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="progress-loader">
+      <div class="progress-bar-container">
+        <div class="progress-bar"></div>
+      </div>
+    </div>
+    <div class="results">
+      <div class="resCard water" onclick="openModal('water')">
+        <p>Water</p>
+      </div>
+      <div class="resCard needle" onclick="openModal('needle')">
+        <p>Needle</p>
+      </div>
+      <div class="resCard multiple" onclick="openModal('multiple')">
+        <p>Multiple</p>
+      </div>
+    </div>
+    <div class="resModalwater resModal">
+      <div class="closeModalBtn" onclick="closeModal('water')">X</div>
+    </div>
+    <div class="resModalneedle resModal">
+      <div class="closeModalBtn" onclick="closeModal('needle')">X</div>
+    </div>
+    <div class="resModalmultiple resModal">
+      <div class="closeModalBtn" onclick="closeModal('multiple')">X</div>
+    </div>
+    <div class="footer"></div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
